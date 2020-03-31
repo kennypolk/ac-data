@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcData", "src\AcData\AcData.csproj", "{78AC2F4B-E7C0-4141-BC83-B5E646722A75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78AC2F4B-E7C0-4141-BC83-B5E646722A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AC2F4B-E7C0-4141-BC83-B5E646722A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AC2F4B-E7C0-4141-BC83-B5E646722A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AC2F4B-E7C0-4141-BC83-B5E646722A75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21535F13-F484-4CDE-87F9-1F1B40B6AB56}
+	EndGlobalSection
+EndGlobal
