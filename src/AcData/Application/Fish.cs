@@ -13,6 +13,6 @@ namespace AcData.Application
         [JsonProperty("location")] 
         public MapLocation MapLocation { get; set; }
         public List<TimeOfDay> TimeOfDay { get; set; }
-        public List<Availability> Availability { get; set; }
+        public Dictionary<int, List<CalendarMonth>> Availability { get; set; }
     }
 }

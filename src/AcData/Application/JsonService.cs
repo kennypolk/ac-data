@@ -89,11 +89,11 @@ namespace AcData.Application
             return _timeOfDay.Where(x => timings.Select(y => y.TimeOfDayId).Contains(x.TimeOfDayId)).ToList();
         }
 
-        private List<Availability> GenerateAvailability(int fishId, List<FishSeasonality> fishSeasonality)
+        private Dictionary<int, List<CalendarMonth>> GenerateAvailability(int fishId, List<FishSeasonality> fishSeasonality)
         {
             var seasonality = fishSeasonality.Where(x => x.FishId == fishId).GroupBy(x => x.HemisphereId).Select(y => new { HemisphereId = y.Key, Months = y.Select(x => x.MonthId).ToList() });
 
-            return seasonality.Select(item => new Availability {Hemisphere = _hemispheres.Find(x => x.HemisphereId == item.HemisphereId), Months = _calendarMonths.Where(x => item.Months.Contains(x.CalendarMonthId)).ToList()}).ToList();
+            return seasonality.ToDictionary(item => item.HemisphereId, item => _calendarMonths.Where(x => item.Months.Contains(x.CalendarMonthId)).ToList());
         }
     }
 }
